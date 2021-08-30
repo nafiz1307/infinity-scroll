@@ -1,6 +1,12 @@
 const imageContainer = document.getElementById('image-container');
 const loader = document.getElementById('loader');
 
+//Check if all images are loaded
+
+function imageLoaded(){
+    console.log('image loaded');
+}
+
 //Helper Function
 function setAttributes(element,attributes){
     for(const key in attributes){
@@ -20,8 +26,10 @@ function displayPhotos(){
         })
 
         //event listener for load checking
+        
 
         const img = document.createElement('img');
+        img.addEventListener('load',imageLoaded)
         // img.setAttribute('src',photo.urls.regular);
         // img.setAttribute('alt',photo.alt_description);
         // img.setAttribute('title',photo.alt_description);
