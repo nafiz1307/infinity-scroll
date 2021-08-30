@@ -1,2 +1,5 @@
 # infinity-scroll
-it will be a basic javascript project with infinity scrolling effect
+A basic javascript project with infinity scrolling effect.
+
+## API used:
+1. Unsplash API
