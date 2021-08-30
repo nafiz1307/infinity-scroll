@@ -19,6 +19,8 @@ function displayPhotos(){
             target : '_blank',
         })
 
+        //event listener for load checking
+
         const img = document.createElement('img');
         // img.setAttribute('src',photo.urls.regular);
         // img.setAttribute('alt',photo.alt_description);
@@ -51,6 +53,12 @@ async function getPhotos(){
         //Catch error
     }
 }
+
+//Scroll bottom test
+window.addEventListener('scroll', ()=>{
+    if(window.innerHeight + window.scrollY>=document.body.offsetHeight - 100)
+    getPhotos()
+})
 
 
 //onLoad
