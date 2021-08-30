@@ -19,6 +19,7 @@ function imageLoaded(){
     console.log(imagesLoaded);
     if(imagesLoaded===totalImages){
         ready = true;
+        loader.hidden=true;
         console.log('ready=' , ready);
     }
 }
@@ -32,7 +33,7 @@ function setAttributes(element,attributes){
 
 //Create Elements for links and photos
 function displayPhotos(){
-
+    imagesLoaded=0;
     totalImages = photosArray.length;
     console.log('total images', totalImages)
     photosArray.forEach((photo)=>{
